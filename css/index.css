@@ -41,7 +41,6 @@
   cursor: pointer;
 }
 .menu {
-  display: none;
   position: fixed;
   top: 75px;
   left: 0;
@@ -61,8 +60,33 @@
   padding: 30px 0;
   text-align: center;
 }
-.menu--open {
-  display: block;
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 0.5s;
+  visibility: visible;
+}
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+}
+.slideOutLeft {
+  animation-name: slideOutLeft;
+  animation-duration: 0.5s;
+  visibility: hidden;
 }
 .articles {
   margin-top: 95px;
