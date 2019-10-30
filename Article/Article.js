@@ -28,13 +28,13 @@ const data = [
     firstParagraph: `Alohamora wand elf parchment, Wingardium Leviosa hippogriff, house dementors betrayal. Holly, Snape centaur portkey ghost
         Hermione spell bezoar Scabbers. Peruvian-Night-Powder werewolf, Dobby pear-tickle half-moon-glasses, Knight-Bus. Padfoot
         snargaluff seeker: Hagrid broomstick mischief managed. Snitch Fluffy rock-cake, 9 ¾ dress robes I must not tell lies. Mudbloods
-        yew pumpkin juice phials Ravenclaw’s Diadem 10 galleons Thieves Downfall. Ministry-of-Magic mimubulus mimbletonia Pigwidgeon
+        yew pumpkin juice phials Ravenclaw’s Diadem 10 galleons Thieves Downfall. Ministry-of-Magic mimubulus mimbconstonia Pigwidgeon
         knut phoenix feather other minister Azkaban. Hedwig Daily Prophet treacle tart full-moon Ollivanders You-Know-Who cursed.
         Fawkes maze raw-steak Voldemort Goblin Wars snitch Forbidden forest grindylows wool socks`,
 
     secondParagraph: `Boggarts lavender robes, Hermione Granger Fantastic Beasts and Where to Find Them. Bee in your bonnet Hand of Glory elder
         wand, spectacles House Cup Bertie Bott’s Every Flavor Beans Impedimenta. Stunning spells tap-dancing spider Slytherin’s Heir
-        mewing kittens Remus Lupin. Palominos scarlet train black robes, Metamorphimagus Niffler dead easy second bedroom. Padma
+        mewing kittens Remus Lupin. Palominos scarconst train black robes, Metamorphimagus Niffler dead easy second bedroom. Padma
         and Parvati Sorting Hat Minister of Magic blue turban remember my last.`,
 
     thirdParagraph: `Toad-like smile Flourish and Blotts he knew I’d come back Quidditch World Cup. Fat Lady baubles banana fritters fairy lights 
@@ -109,42 +109,31 @@ const data = [
   },
 ];
 
-const articleBuilder = (obj) => {
-  //create div container for article
-  let articleDiv = document.createElement('div');
-  //giv div class of article
+function articleBuilder(obj) {
+  //create elements tool
+  const create = element => document.createElement(element);;
+  //append to articleDiv tool
+  const add = element => articleDiv.appendChild(element);
+  //create elements
+  const articleDiv = create('div');
+  const title = create('h2');
+  const date = create('p');
+  const first = create('p');
+  const second = create('p');
+  const third = create('p');
+  const articleExpand = create('span');
+  //add classes
   articleDiv.classList.add("article");
-  //add articleDiv to DOM
-  document.querySelector('.articles').appendChild(articleDiv);
-
-  //create h2 for article title
-  let title = document.createElement('h2');
-  //set text content to title from object
-  title.textContent = obj.title;
-  //add title to the article div
-  articleDiv.appendChild(title);
-
-  //steps largely repeat for rest of elements
-  let date = document.createElement('p');
   date.classList.add('date');
+  articleExpand.classList.add('expandButton');
+  //add content
+  title.textContent = obj.title;
   date.textContent = obj.date;
-  articleDiv.appendChild(date);
-
-  let first = document.createElement('p');
   first.textContent = obj.firstParagraph;
-  articleDiv.appendChild(first);
-
-  let second = document.createElement('p');
   second.textContent = obj.secondParagraph;
-  articleDiv.appendChild(second);
-
-  let third = document.createElement('p');
   third.textContent = obj.thirdParagraph;
-  articleDiv.appendChild(third);
-
-  let articleExpand = document.createElement('span');
   articleExpand.textContent = "click to expand";
-  //click event on toggle button w/if statement to change text instructions
+  //add event listener to expand button 
   articleExpand.addEventListener('click', () => {
     articleDiv.classList.toggle('article-open')
     if (articleExpand.textContent === 'click to expand') {
@@ -153,11 +142,17 @@ const articleBuilder = (obj) => {
       articleExpand.textContent = "click to expand";
     }
   });
-  articleExpand.classList.add('expandButton');
-  articleDiv.appendChild(articleExpand);
+  //append to articleDiv
+  add(title);
+  add(date);
+  add(first);
+  add(second);
+  add(third);
+  add(articleExpand);
+  return articleDiv;
 }
 
-data.map(article => articleBuilder(article));
+data.map(article => document.querySelector('.articles').appendChild(articleBuilder(article)));
 
 
 

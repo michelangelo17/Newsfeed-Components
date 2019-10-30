@@ -9,6 +9,13 @@ let menuItems = [
   'Log Out'
 ];
 
+let menuMaker = (arr) => {
+  let menuDiv = document.createElement('div');
+  menuDiv.classList.add('menu');
+  document.querySelector('header').prepend(menuDiv);
+}
+
+console.log(menuMaker(menuItems));
 /* 
 
   Step 1: Write a function that will create a menu component as seen below:
