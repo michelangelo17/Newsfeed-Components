@@ -18,7 +18,7 @@ function menuMaker(arr) {
   const menu = create('div');
   const list = create('ul');
   //add class
-  menu.classList.add('menu', 'slideOutLeft');
+  menu.classList.add('menu');
   //append to menu
   add(menu, list);
   //creating, adding content and appending menu items using forEach
@@ -29,16 +29,12 @@ function menuMaker(arr) {
   });
   //add event listener on menu button to open and close menu
   document.querySelector('.menu-button').addEventListener('click', (e) => {
-    menu.classList.toggle('slideOutLeft');
+    menu.classList.contains('slideInLeft') ? 
+    menu.classList.toggle('slideOutLeft') : 
     menu.classList.toggle('slideInLeft');
   });
   return menu;
 }
-
-
-
-
-
 
 //add menu to div with class header
 document.querySelector('.header').appendChild(menuMaker(menuItems));
