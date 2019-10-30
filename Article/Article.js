@@ -88,6 +88,36 @@ const data = [
   }
 ];
 
+//need to refactor to only take a single object from the data ARRAY
+const articleBuilder = (obj) => {
+  let articleDiv = document.createElement('div');
+  articleDiv.classList.add("article");
+  document.querySelector('.articles').appendChild(articleDiv);
+  let title = document.createElement('h2');
+  title.textContent = obj.title;
+  articleDiv.appendChild(title);
+  let date = document.createElement('p');
+  date.classList.add('date');
+  date.textContent = obj.date;
+  articleDiv.appendChild(date);
+  let first = document.createElement('p');
+  first.textContent = obj.firstParagraph;
+  articleDiv.appendChild(first);
+  let second = document.createElement('p');
+  second.textContent = obj.secondParagraph;
+  articleDiv.appendChild(second);
+  let third = document.createElement('p');
+  third.textContent = obj.thirdParagraph;
+  articleDiv.appendChild(third);
+  let articleExpand = document.createElement('span');
+  articleExpand.classList.add('expandButton');
+  articleDiv.appendChild(articleExpand);
+}
+
+articleBuilder(data[0]);
+
+// console.log(articleExpand);
+
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
   <div class="article">
