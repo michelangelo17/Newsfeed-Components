@@ -111,7 +111,7 @@ const data = [
 
 function articleBuilder(obj) {
   //create elements tool
-  const create = element => document.createElement(element);;
+  const create = element => document.createElement(element);
   //append to articleDiv tool
   const add = element => articleDiv.appendChild(element);
   //create elements
