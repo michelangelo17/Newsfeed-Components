@@ -1,7 +1,6 @@
 /* This is the data we will be using to create our article components */
 /* Look over this data, then proceed to line 91*/
-const data = [
-  {
+const data = [{
     title: 'Lambda School Students: "We\'re the best!"',
     date: 'Nov 5th, 2018',
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
@@ -109,51 +108,113 @@ const data = [
   },
 ];
 
-function articleBuilder(obj) {
-  //create elements tool
-  const create = element => document.createElement(element);
-  //append to articleDiv tool
-  const add = element => articleDiv.appendChild(element);
-  //create elements
-  const articleDiv = create('div');
-  const title = create('h2');
-  const date = create('p');
-  const first = create('p');
-  const second = create('p');
-  const third = create('p');
-  const articleExpand = create('span');
-  //add classes
-  articleDiv.classList.add("article");
-  date.classList.add('date');
-  articleExpand.classList.add('expandButton');
-  //add content
-  title.textContent = obj.title;
-  date.textContent = obj.date;
-  first.textContent = obj.firstParagraph;
-  second.textContent = obj.secondParagraph;
-  third.textContent = obj.thirdParagraph;
-  articleExpand.textContent = "click to expand";
-  //add event listener to expand button 
-  articleExpand.addEventListener('click', () => {
-    articleDiv.classList.toggle('article-open')
-    if (articleExpand.textContent === 'click to expand') {
-      articleExpand.textContent = 'click to shrink';
-    } else {
-      articleExpand.textContent = "click to expand";
-    }
-  });
-  //append to articleDiv
-  add(title);
-  add(date);
-  add(first);
-  add(second);
-  add(third);
-  add(articleExpand);
-  return articleDiv;
-}
+// ***Class refactor***
 
-data.map(article => document.querySelector('.articles').appendChild(articleBuilder(article)));
+class Article {
+  constructor(obj) {
+    this.title = obj.title;
+    this.date = obj.date;
+    this.firstParagraph = obj.firstParagraph;
+    this.secondParagraph = obj.secondParagraph;
+    this.thirdParagraph = obj.thirdParagraph;
+  }
+  createArticleHTML() {
+    //create elements tool
+    const create = element => document.createElement(element);
+    //append to articleDiv tool
+    const add = element => articleDiv.appendChild(element);
+    //create elements
+    const articleDiv = create('div');
+    const title = create('h2');
+    const date = create('p');
+    const first = create('p');
+    const second = create('p');
+    const third = create('p');
+    const articleExpand = create('span');
+    //add classes
+    articleDiv.classList.add("article");
+    date.classList.add('date');
+    articleExpand.classList.add('expandButton');
+    //add content
+    title.textContent = this.title;
+    date.textContent = this.date;
+    first.textContent = this.firstParagraph;
+    second.textContent = this.secondParagraph;
+    third.textContent = this.thirdParagraph;
+    articleExpand.textContent = "click to expand";
+    //add event listener to expand button 
+    articleExpand.addEventListener('click', () => {
+      articleDiv.classList.toggle('article-open')
+      if (articleExpand.textContent === 'click to expand') {
+        articleExpand.textContent = 'click to shrink';
+      } else {
+        articleExpand.textContent = "click to expand";
+      }
+    });
+    //append to articleDiv
+    add(title);
+    add(date);
+    add(first);
+    add(second);
+    add(third);
+    add(articleExpand);
+    return articleDiv;
+  }
+};
 
+data.map(item => {
+  const articleObj = new Article(item);
+  document.querySelector('.articles').appendChild(articleObj.createArticleHTML());
+});
+
+
+
+// ***Function solution below***
+
+// function articleBuilder(obj) {
+//   //create elements tool
+//   const create = element => document.createElement(element);
+//   //append to articleDiv tool
+//   const add = element => articleDiv.appendChild(element);
+//   //create elements
+//   const articleDiv = create('div');
+//   const title = create('h2');
+//   const date = create('p');
+//   const first = create('p');
+//   const second = create('p');
+//   const third = create('p');
+//   const articleExpand = create('span');
+//   //add classes
+//   articleDiv.classList.add("article");
+//   date.classList.add('date');
+//   articleExpand.classList.add('expandButton');
+//   //add content
+//   title.textContent = obj.title;
+//   date.textContent = obj.date;
+//   first.textContent = obj.firstParagraph;
+//   second.textContent = obj.secondParagraph;
+//   third.textContent = obj.thirdParagraph;
+//   articleExpand.textContent = "click to expand";
+//   //add event listener to expand button 
+//   articleExpand.addEventListener('click', () => {
+//     articleDiv.classList.toggle('article-open')
+//     if (articleExpand.textContent === 'click to expand') {
+//       articleExpand.textContent = 'click to shrink';
+//     } else {
+//       articleExpand.textContent = "click to expand";
+//     }
+//   });
+//   //append to articleDiv
+//   add(title);
+//   add(date);
+//   add(first);
+//   add(second);
+//   add(third);
+//   add(articleExpand);
+//   return articleDiv;
+// }
+
+// data.map(article => document.querySelector('.articles').appendChild(articleBuilder(article)));
 
 
 // console.log(articleExpand);
