@@ -85,36 +85,81 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
-  }
+  },
+  {
+    title: `News Reports Indicate Cause for Concern`,
+    date: `Oct 30th, 2019`,
+    firstParagraph: `community The Daily he said she said crowdfunding just across the wire Patch Dan Fleckner Android morgue digital circulation strategy, Django hot news doctrine open source crowdsourcing WaPo the medium is the message natural-born blogger we will make them pay cancel my subscription experiment, writing nonprofit he said she said Pulse advertising Knight News Challenge engagement iPad app. fair use Quora Rupert Murdoch Article Skimmer recontextualize discuss morgue future Flipboard media diet kitchen table of the future 5% corruption, he said she said nut graf Innovator's Dilemma RT Reuters news.me Dayton for under $900 a day Reuters CPM paywall.`,
+    secondParagraph: `explainer content is king try PR content farm The Weekender CPM reporting nut graf Ushahidi, go viral libel lawyer synergize curation awesome Free Darko inverted pyramid Rupert Murdoch metered model, Neil Postman Knight News Challenge Quora in the slot CPM paidContent metered model. Snarkmarket David Foster Wallace we will make them pay hot news doctrine eHow Rupert Murdoch Reuters anonymity, paywall information overload Dan Fleckner RT should isn't a business model This Week in Review people formerly known as the audience, fourth estate recontextualize analytics libel lawyer Free Darko Frontline.`,
+    thirdParagraph: `Arianna backpack journalist iPad app paywall Fuego gutter he said she said bringing a tote bag to a knife fight morgue David Cohn, Like button synergize Colbert bump Fuego 5% corruption Voice of San Diego Walter Lippmann TBD, production of innocence process vs. product Steve Jobs Julian Assange crowdsourcing tweets tags David Cohn. +1 right-sizing tags algorithms mathewi The Weekender Flipboard #twittermakesyoustupid Innovator's Dilemma, The Work of Art in the Age of Mechanical Reproduction Tim Carmody go viral HuffPo scoop Paul Steiger Walter Lippmann collaboration, Chartbeat Frontline content is king backpack journalist Django Journal Register 5% corruption.`,
+  },
+  {
+    title: `RUN FOR YOUR LIVES!`,
+    date: `Oct 31st, 2019`,
+    firstParagraph: `Haunt tearing murder crying an mental corpse zombies evil, chainsaw motionless gory. Eerie needles edginess, graveyard on death rotten, disturbin. Non grave. Children creepy deranged, ashes a killer a, monster mental hospital. Anthrax putrid, disturbing and morbid convulsing, rotten menacing fata. Bleak, monstrosity dread with demon scourge terrifying. Pain needles commodo drool rabid nightmare. Falling a spooky screaming. Disembowel stab, chains dungeon torment fiendish, gruesome psychopath monster captive.`,
+    secondParagraph: `A mutilation possession obsession at fanatic. Creep serial killer, bury a scourge menacing, pain bowels nightmare. Graves slice ominous is guns exorcism guts. Undead obsession tear horrifying, a devil fiendish tense in. Gore at chainsaw knife crazed choking helpless. Falling are graveyard graves est. Haunt sliced at choking cut drool. Dar. Mutilation rotten, Blood hair raising or, blood in eyeball. Haunt sliced at choking cut drool. Menacing nightmare zombie deranged in stabbing. Graves slice ominous is guns exorcism guts. Virus witch demonic dripping, at werewolf psycho slice flames. Bloodcurdling decompose. Zombie in virus scared cat Michael Myers worms. Menacing nightmare zombie deranged in stabbing. Haunt suicide silent, gory as demonic alarming, buried in fallen angel. Dungeon in a gruesome, a disembowel unknown. Trapped flesh grotesque squeal, bloodcurdling chilling hair-raising spooky hazardous daring. Haunt suicide silent, gory as demonic alarming, buried in fallen angel. Death bruises moon torture demons devil or vampire werewolf wind. Horror bowels exorcism grave cut, murderer creatur.`,
+    thirdParagraph: `Ripped. Haunt sliced at choking cut drool. Eyeball cat silent, morbid in damp torture, 666 at brains. Tearing eyeballs zombie slash. killer mental psychotic sliced. Blood ashes tearing. Drowning spooky at fanatic with murderer. Occult at alley pushed. Tearing eyeballs zombie slash. In the deranged Halloween slice. Disembowel stab, chains dungeon torment fiendish, gruesome psychopath monster captive, a mutilation possession obsession at fanatic. Screams creaking tension kettle our exorcist. Trapped flesh grotesque squeal, bloodcurdling chilling hair-raising spooky hazardous daring. Menacing nightmare zombie deranged in stabbing. Killer scourge scared, drowning helpless sheep at, terrifying and crazy gory. Sinister at creepy anxiety bite monster electrocution smashed.`,
+  },
+  {
+    title: `The Zombies Have Won`,
+    date: `Nov 1st, 2019`,
+    firstParagraph: `Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.`,
+    secondParagraph: `Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis. Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead.`,
+    thirdParagraph: `Lucio fulci tremor est dark vivos magna. Expansis creepy arm yof darkness ulnis witchcraft missing carnem armis Kirkman Moore and Adlard caeruleum in locis. Romero morbo Congress amarus in auras. Nihil horum sagittis tincidunt, zombie slack-jawed gelida survival portenta. The unleashed virus est, et iam zombie mortui ambulabunt super terram. Souless mortuum glassy-eyed oculos attonitos indifferent back zom bieapoc alypse. An hoc dead snow braaaiiiins sociopathic incipere Clairvius Narcisse, an ante? Is bello mundi z?`,
+  },
 ];
 
-//need to refactor to only take a single object from the data ARRAY
 const articleBuilder = (obj) => {
+  //create div container for article
   let articleDiv = document.createElement('div');
+  //giv div class of article
   articleDiv.classList.add("article");
+  //add articleDiv to DOM
   document.querySelector('.articles').appendChild(articleDiv);
+
+  //create h2 for article title
   let title = document.createElement('h2');
+  //set text content to title from object
   title.textContent = obj.title;
+  //add title to the article div
   articleDiv.appendChild(title);
+
+  //steps largely repeat for rest of elements
   let date = document.createElement('p');
   date.classList.add('date');
   date.textContent = obj.date;
   articleDiv.appendChild(date);
+
   let first = document.createElement('p');
   first.textContent = obj.firstParagraph;
   articleDiv.appendChild(first);
+
   let second = document.createElement('p');
   second.textContent = obj.secondParagraph;
   articleDiv.appendChild(second);
+
   let third = document.createElement('p');
   third.textContent = obj.thirdParagraph;
   articleDiv.appendChild(third);
+
   let articleExpand = document.createElement('span');
+  articleExpand.textContent = "click to expand";
+  //click event on toggle button w/if statement to change text instructions
+  articleExpand.addEventListener('click', () => {
+    articleDiv.classList.toggle('article-open')
+    if (articleExpand.textContent === 'click to expand') {
+      articleExpand.textContent = 'click to shrink';
+    } else {
+      articleExpand.textContent = "click to expand";
+    }
+  });
   articleExpand.classList.add('expandButton');
   articleDiv.appendChild(articleExpand);
 }
 
-articleBuilder(data[0]);
+data.map(article => articleBuilder(article));
+
+
 
 // console.log(articleExpand);
 
