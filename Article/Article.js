@@ -108,7 +108,7 @@ const data = [{
   },
 ];
 
-// ***Class refactor***
+// ***refactored using class constructor***
 
 class Article {
   constructor(obj) {
@@ -167,8 +167,6 @@ data.map(item => {
   document.querySelector('.articles').appendChild(articleObj.createArticleHTML());
 });
 
-
-
 // ***Function solution below***
 
 // function articleBuilder(obj) {
@@ -217,7 +215,7 @@ data.map(item => {
 // data.map(article => document.querySelector('.articles').appendChild(articleBuilder(article)));
 
 
-// console.log(articleExpand);
+// ***End of code***
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
   
